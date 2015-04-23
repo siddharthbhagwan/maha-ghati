@@ -7,7 +7,6 @@ $(document).ready(function() {
     last_played = vidId;
     embed_html = '<iframe id="player_'+vidId+'" width="700" height="400" src="http://www.youtube.com/embed/' + vidId + '?enablejsapi=1&autoplay=1&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>';
     $('.video-container').html(embed_html);
-    console.log('id ' + vidId);
     new YT.Player('player_'+vidId, {
       events: {
         'onStateChange': onPlayerStateChange
@@ -20,6 +19,7 @@ $(document).ready(function() {
   });
 
   $('.previous').click(function(){
+    console.log($('#'+last_played).prev());
     $('#'+last_played).prev().click();
   });
 
@@ -57,5 +57,5 @@ $(document).ready(function() {
     }
   }
 
-  (function(){$('.list-element').first().click(); console.log('called');}())
+  (function(){$('.list-element').first().click();}())
 });
