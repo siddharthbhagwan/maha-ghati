@@ -13,12 +13,16 @@
   margin-top: 100px;
 }
 
-.fa-nx {
-	font-size: 80px !important;
-}
-
 .player-icons {
 	text-align: center;
+}
+
+.previous, .next, .shuffle {
+	font-size: 65px !important;
+}
+
+.no_padding {
+	padding: 0px;
 }
 
 .video-container {
@@ -41,7 +45,67 @@
   margin-top: 70px;
 }
 
-header h1{
+button {
+	border: none;
+	background: white;
+	outline: none;
+	padding: 0px;
+}
+
+.shuffle_on {
+  position: relative;
+  outline:none;
+  cursor: pointer;
+  border: solid 1px white;
+  border-radius: 100px;
+  padding: 11px 11px 7px 11px;
+  background: black;
+  font-size: 45px !important;
+}
+
+header h1 {
 	text-align: center;
 	font-size: 48px !important;
+}
+
+/* Ripple */
+
+.fab{
+  border-radius: 50%;
+  margin:0;
+  padding: 20px;
+}
+
+.material{
+  position:relative;
+  color:white;
+  margin: 20px auto;
+  height:400px;
+  width:500px;
+  background:#f45673;  
+}
+
+.ripple{
+  overflow:hidden;
+}
+
+.ripple-effect{
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: white;    
+  -webkit-animation: ripple-animation 2s;
+}
+
+
+@-webkit-keyframes ripple-animation {
+  from {
+    -webkit-transform: scale(1);
+    opacity: 0.4;
+  }
+  to {
+    -webkit-transform: scale(100);
+    opacity: 0;
+  }
 }
