@@ -40,3 +40,8 @@
 .main-list {
   margin-top: 70px;
 }
+
+header h1{
+	text-align: center;
+	font-size: 48px !important;
+}
