@@ -59,7 +59,7 @@ button {
   border: solid 1px white;
   border-radius: 100px;
   padding: 11px 11px 7px 11px;
-  background: black;
+  background: gray;
   font-size: 45px !important;
 }
 
@@ -70,7 +70,7 @@ header h1 {
 
 /* Ripple */
 
-.fab{
+/*.fab{
   border-radius: 50%;
   margin:0;
   padding: 20px;
@@ -108,4 +108,4 @@ header h1 {
     -webkit-transform: scale(100);
     opacity: 0;
   }
-}
+}*/
