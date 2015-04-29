@@ -29,7 +29,6 @@ function downplayPlayerNavs(){
 }
 
 function nextSong(){
-  console.log('clicked');
   ($('.shuffle').attr('data-shuffle') == 'true')?
     ($('.list-element:eq(' + ((Math.floor(Math.random()*parseInt(total_songs)))-1) + ')').click()):
       $('#'+current_song).next().length?
@@ -46,13 +45,11 @@ function previousSong(){
 }
 
 function highlightList(){
-  $(this).css('cursor','pointer');
-  $(this).stop().animate({ fontSize : '15px' });
+  $(this).css('cursor','pointer').css('background', '#F5F5F5');
 }
 
 function downplayList(){
-  $(this).css('cursor','auto');
-  $(this).stop().animate({ fontSize : '14px' });
+  $(this).css('cursor','auto').css('background', '#FFFFFF');;
 }
 
 function toggleShuffle(event, from){

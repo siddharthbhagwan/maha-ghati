@@ -42,7 +42,7 @@
 }
 
 .main-list {
-  margin-top: 70px;
+  margin-top: 30px;
 }
 
 button {
@@ -63,9 +63,38 @@ button {
   font-size: 45px !important;
 }
 
+.tagline {
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: -40px;
+}
+
+
 header h1 {
 	text-align: center;
 	font-size: 48px !important;
+}
+
+body {
+    font-size: 18px;
+  }
+
+@media only screen and (min-width: 768px) {
+  .main-list {
+    margin-top: 20px;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  .tagline {
+    font-size: 23px;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: -40px;
+  }
 }
 
 /* Ripple */
