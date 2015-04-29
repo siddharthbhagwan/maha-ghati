@@ -1,6 +1,6 @@
 var last_played, total_songs, current_song;
 
-function clickSong(){
+function setSong(){
   var embed_html;
   last_played = current_song;
   current_song = $(this).attr('id')
@@ -29,6 +29,7 @@ function downplayPlayerNavs(){
 }
 
 function nextSong(){
+  console.log('clicked');
   ($('.shuffle').attr('data-shuffle') == 'true')?
     ($('.list-element:eq(' + ((Math.floor(Math.random()*parseInt(total_songs)))-1) + ')').click()):
       $('#'+current_song).next().length?
@@ -69,10 +70,27 @@ function toggleShuffle(event, from){
       $(this).attr('data-shuffle','false');
       $(this).css('color','black');
       // $(this).removeClass('ripple');
-      clearInterval(shuffle_start);
+      // clearInterval(shuffle_start);
     } 
   }
 }
+
+$(document).ready(function() {
+
+  last_played = $('.list-element').first().attr('id');;
+  total_songs = $('.list-element').length;
+  current_song = $('.list-element').first().attr('id');
+
+  $('.list-element').click(setSong);
+  $('.player_nav').hover(highlightPlayerNavs, downplayPlayerNavs);
+  $('.next').click(nextSong);
+  $('.previous').click(previousSong);
+  $('.list-element').hover(highlightList, downplayList);
+  $('.shuffle').click(toggleShuffle);
+  window.setTimeout(function(){
+    $('.list-element').first().click();
+  }, 1000);
+});
 
 // Ripple
 // function createRipple(event) {
@@ -100,18 +118,3 @@ function toggleShuffle(event, from){
 //     $div.remove();
 //   }, 2000);
 // }
-
-$(document).ready(function() {
-
-  last_played = undefined;
-  total_songs = $('.list-element').length;
-  current_song = $('.list-element').first().attr('id');
-
-  $('.list-element').click(clickSong);
-  $('.player_nav').hover(highlightPlayerNavs, downplayPlayerNavs);
-  $('.next').click(nextSong);
-  $('.previous').click(previousSong);
-  $('.list-element').hover(highlightList, downplayList);
-  $('.shuffle').click(toggleShuffle);
-  $('.list-element').first().click();
-});
