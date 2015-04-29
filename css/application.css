@@ -64,12 +64,11 @@ button {
 }
 
 .tagline {
-  font-size: 18px;
+  font-size: 28px;
   font-style: italic;
   text-align: center;
   margin-bottom: -40px;
 }
-
 
 header h1 {
 	text-align: center;
@@ -77,8 +76,24 @@ header h1 {
 }
 
 body {
-    font-size: 18px;
-  }
+  font-size: 18px;
+}
+
+footer {
+  text-align: center;
+  border-top: solid 1px #DDDDDD;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 14px;
+}
+
+footer a {
+  color: black;
+}
+
+.previous, .next, .shuffle {
+  font-size:65px !important;
+}
 
 @media only screen and (min-width: 768px) {
   .main-list {
@@ -89,8 +104,12 @@ body {
     font-size: 15px;
   }
 
+  header {
+    font-size: 48px !important;
+  }
+
   .tagline {
-    font-size: 23px;
+    font-size: 25px;
     font-style: italic;
     text-align: center;
     margin-bottom: -40px;
