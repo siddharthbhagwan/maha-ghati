@@ -4,7 +4,7 @@ function setSong(){
   var embed_html;
   last_played = current_song;
   current_song = $(this).attr('id')
-  embed_html = '<iframe id="player_' + current_song + '" width="700" height="400" src="http://www.youtube.com/embed/' + current_song + '?enablejsapi=1&autoplay=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>';
+  embed_html = '<iframe id="player_' + current_song + '" width="700" height="400" src="http://www.youtube.com/embed/' + current_song + '?enablejsapi=1&autoplay=1&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>';
   $('.video-container').html(embed_html);
   new YT.Player('player_'+current_song, {
     events: {
