@@ -95,6 +95,10 @@ footer a {
   font-size:65px !important;
 }
 
+.nowplaying {
+  padding-right: 10px;
+}
+
 @media only screen and (min-width: 768px) {
   .main-list {
     margin-top: 20px;

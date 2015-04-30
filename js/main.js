@@ -6,6 +6,8 @@ function setSong(){
   current_song = $(this).attr('id')
   embed_html = '<iframe id="player_' + current_song + '" width="700" height="400" src="http://www.youtube.com/embed/' + current_song + '?enablejsapi=1&autoplay=1&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>';
   $('.video-container').html(embed_html);
+  $('#' + last_played +' i').removeClass('fa-bullhorn');
+  $('#' + current_song +' i').addClass('fa-bullhorn');
   new YT.Player('player_'+current_song, {
     events: {
       'onStateChange': onPlayerStateChange
